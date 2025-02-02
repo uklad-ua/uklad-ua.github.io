@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+html {
+  box-sizing: border-box;
+
+  font-size: 62.5%;
+  font-family:
+    system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans",
+    "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+    "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+.wrapper {
+  display: flex;
+  height: 100vh;
+}
+
+.textarea {
+  padding: 1rem;
+  border: none;
+  outline: none;
+  resize: none;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.6rem;
+}
+
+.textarea::placeholder {
+  color: black;
+  opacity: 1;
+}
+
+.cyrillic {
+  background-color: blue;
+}
+
+.cyrillic::selection {
+  color: blue;
+  background-color: white;
+}
+
+.latin {
+  background-color: yellow;
+}
+
+.latin::selection {
+  color: yellow;
+  background-color: dimgray;
+}
+
+@media screen and (orientation: landscape) {
+  .textarea {
+    width: 50vw;
+  }
+}
+
+@media screen and (orientation: portrait) {
+  .wrapper {
+    flex-direction: column;
+  }
+  
+  .textarea {
+    height: 50vh;
+  }
+}
